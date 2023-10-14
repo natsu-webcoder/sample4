@@ -1,0 +1,12 @@
+@use "../../global" as *;
+
+
+.p-breadcrumb {
+  margin-top: 30px;
+  font-size: 13px;
+
+  span {
+    text-decoration: underline;
+  }
+}
+

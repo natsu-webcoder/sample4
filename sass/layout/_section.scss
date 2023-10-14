@@ -1,0 +1,14 @@
+@use "../global" as *;
+
+
+.l-section {
+  padding: 70px 0;
+
+  @include mq(lv767) {
+    padding: 50px 0;
+  }
+}
+
+.l-section--gray {
+  background-color: #f2f2f2;
+}

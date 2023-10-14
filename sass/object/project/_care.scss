@@ -1,0 +1,29 @@
+@use "../../global" as *;
+
+
+.p-care {
+  @include mq(lv767) {
+    padding-top: 80px;
+  }
+
+  &__heading {
+    text-align: center;
+  }
+
+  &__body {
+    margin-top: 60px;
+
+    @include mq(lv767) {
+      margin-top: 30px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include mq(lv767) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

@@ -1,0 +1,94 @@
+@use "../global" as *;
+
+
+.l-footer {
+  padding: 100px 0 60px 0;
+  background-color: #fff;
+
+  @include mq(lv1280) {
+    padding: 80px 0 40px 0;
+  }
+
+  @include mq(lv767) {
+    padding: 40px 0 40px 0;
+  }
+
+  &__inner {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mq(lv767) {
+      flex-direction: column;
+    }
+  }
+
+  &__logo-img {
+    width: 340px;
+
+    @include mq(lv1280) {
+      width: 280px;
+    }
+
+    @include mq(lv767) {
+      width: 200px;
+    }
+  }
+
+  &__info {
+    font-weight: bold;
+
+    @include mq(lv767) {
+      margin-top: 10px;
+    }
+  }
+
+  .p-info__tel-img {
+    width: 32px;
+
+    @include mq(lv1280) {
+      width: 24px;
+    }
+
+    @include mq(lv767) {
+      width: 20px;
+    }
+  }
+
+  .p-info__tel {
+    font-size: 36px;
+    line-height: 1.2;
+
+    @include mq(lv1280) {
+      font-size: 28px;
+    }
+
+    @include mq(lv767) {
+      font-size: 24px;
+    }
+  }
+
+  .p-info__text {
+    font-size: 16px;
+
+    @include mq(lv1280) {
+      font-size: 14px;
+    }
+
+    @include mq(lv767) {
+      font-size: 12px;
+    }
+  }
+
+  &__copyright {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 30px;
+  }
+}

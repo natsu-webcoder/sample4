@@ -1,0 +1,62 @@
+@use "../../global" as *;
+
+
+.p-care-item {
+  padding: 30px;
+  border-bottom: 2px solid #e2e2e2;
+
+  &:nth-child(even) {
+    border-left: 2px solid #e2e2e2;
+
+    @include mq(lv767) {
+      border-left: none;
+    }
+  }
+
+  &:first-child {
+    border-top: 2px solid #e2e2e2;
+  }
+
+  &:nth-child(2) {
+    border-top: 2px solid #e2e2e2;
+
+    @include mq(lv767) {
+      border-top: none;
+    }
+  }
+
+  &__img-wrapper {
+    height: 60px;
+    text-align: center;
+
+    @include mq(lv767) {
+      height: 40px;
+    }
+  }
+
+  &__img {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__title {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+
+    @include mq(lv767) {
+      font-size: 18px;
+      margin-top: 12px;
+    }
+  }
+
+  &__desc {
+    margin-top: 20px;
+  }
+
+  &__more {
+    margin-top: 20px;
+    text-align: right;
+  }
+}

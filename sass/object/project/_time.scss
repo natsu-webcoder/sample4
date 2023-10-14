@@ -1,0 +1,63 @@
+@use "../../global" as *;
+
+
+.p-time {
+
+  &__inner {
+    max-width: 660px;
+    padding: 0 30px;
+    margin: 0 auto;
+
+    @include mq(lv767) {
+      padding: 0 20px;
+    }
+  }
+
+  &__heading {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #b4b3b3;
+    text-align: center;
+  }
+
+  &__table-wrapper {
+    padding: 20px 0;
+    border-bottom: 1px solid #b4b3b3;
+  }
+
+  &__table {
+    text-align: center;
+
+    th {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    td {
+      width: 12%;
+      height: 60px;
+      border-right: solid 1px #b4b3b3;
+    }
+  }
+
+  th.p-time__table-time {
+    text-align: left;
+    border-right: solid 1px #b4b3b3;
+    font-weight: normal;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  &__note-wrapper {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 32px;
+    
+    @include mq(lv767) {
+      font-size: 12px;
+    }
+
+    & > div + div {
+      margin-top: 4px;
+    }
+  }
+}

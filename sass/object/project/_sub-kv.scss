@@ -1,0 +1,89 @@
+@use "../../global" as *;
+
+
+.p-sub-kv {
+  margin-top: 150px;
+  text-align: right;
+
+  @include mq(lv1280) {
+    margin-top: 120px;
+  }
+
+  @include mq(lv767) {
+    margin-top: 90px;
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  &__img {
+    width: 86%;
+    height: 310px;
+    object-fit: cover;
+    border-radius: 0 0 0 64px;
+
+    @include mq(lv1280) {
+      height: 300px;
+    }
+
+    @include mq(lv767) {
+      height: 150px;
+      border-radius: 0 0 0 36px;
+    }
+  }
+
+  &__heading {
+    width: 420px;
+    height: 148px;
+    position: absolute;
+    bottom: 72px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 100vh;
+
+    @include mq(lv1280) {
+      width: 360px;
+    }
+
+    @include mq(lv767) {
+      width: 180px;
+      height: 100px;
+      bottom: -35px;
+    }
+  }
+
+  &__heading-jp {
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+
+    @include mq(lv1280) {
+      font-size: 32px;
+    }
+
+    @include mq(lv767) {
+      font-size: 22px;
+    }
+  }
+
+  &__heading-en {
+    font-weight: bold;
+    text-transform: uppercase;
+
+    @include mq(lv767) {
+      font-size: 12px;
+    }
+  }
+}
+
+.page-id-8 .p-sub-kv {
+  &__heading {
+    @include mq(lv767) {
+      width: 220px;
+    }
+  }
+}

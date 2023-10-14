@@ -1,0 +1,23 @@
+@use "../../global" as *;
+
+
+.p-news-single {
+
+  &__heading-wrapper {
+    text-align: center;
+  }
+
+  &__date {
+    text-align: right;
+    margin-bottom: 10px;
+  }
+
+  &__heading {
+    margin-bottom: 8px;
+  }
+
+  &__body {
+    margin-top: 60px;
+  }
+}
+

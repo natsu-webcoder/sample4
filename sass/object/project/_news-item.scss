@@ -1,0 +1,31 @@
+@use "../../global" as *;
+
+
+.p-news-item {
+  padding: 20px 10px;
+  border-top: 1px solid #000;
+
+  &:last-child {
+    border-bottom: 1px solid #000;
+  }
+
+  &__heading {
+    margin-bottom: 6px;
+  }
+
+  &__date {
+    display: inline-block;
+    margin-right: 14px;
+  }
+
+  &__title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+
+    @include mq(lv767) {
+      -webkit-line-clamp: 2;
+    }
+  }
+}

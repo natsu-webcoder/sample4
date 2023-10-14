@@ -1,0 +1,59 @@
+@use "../../global" as *;
+
+
+.swiper {
+  height: 100%;
+  position: relative;
+}
+
+.swiper-text {
+  position: absolute;
+  bottom: 60px;
+  left: 3%;
+  color: #000;
+  background-color: #fff;
+  font-weight: bold;
+  padding: 40px 80px;
+  border-radius: 100vh;
+
+  @include mq(lv1280) {
+    padding: 30px 60px;
+  }
+
+  @include mq(lv767) {
+    bottom: 20px;
+    padding: 20px 40px;
+  }
+
+  &__jp {
+    font-size: 40px;
+    letter-spacing: 0.1em;
+    line-height: 1.3;
+
+    @include mq(lv1280) {
+      font-size: 32px;
+    }
+
+    @include mq(lv767) {
+      font-size: 24px;
+    }
+  }
+
+  &__en {
+    font-size: 14px;
+    margin-bottom: 10px;
+
+    @include mq(lv767) {
+      font-size: 12px;
+    }
+  }
+}
+
+.swiper-slide-active {
+  .swiper-text {
+    animation-name: fade-in;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+  }
+}

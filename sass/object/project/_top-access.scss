@@ -1,0 +1,67 @@
+@use "../../global" as *;
+
+
+.p-top-access {
+
+  &__inner {
+    display: flex;
+    align-items: center;
+
+    @include mq(lv767) {
+      flex-direction: column;
+    }
+  }
+
+  &__map-wrapper {
+    width: 50%;
+
+    @include mq(lv767) {
+      width: 100%;
+    }
+
+    iframe {
+      height: 450px;
+      width: 100%;
+
+      @include mq(lv767) {
+        height: 200px;
+      }
+    }
+  }
+
+  &__text-wrapper {
+    padding-left: 70px;
+
+    @include mq(lv767) {
+      padding-left: 0;
+      margin-top: 30px;
+    }
+  }
+
+  &__heading {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+    @include mq(lv767) {
+      font-size: 18px;
+    }
+  }
+
+  &__table {
+    th {
+      font-weight: bold;
+      padding: 6px 0;
+      width: 80px;
+      vertical-align: top;
+    }
+
+    td {
+      padding: 6px 0;
+    }
+  }
+
+  &__more {
+    margin-top: 30px;
+  }
+}

@@ -1,0 +1,31 @@
+@use "../../global" as *;
+
+
+.p-info {
+  &__tel-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+  }
+
+  &__tel-img {
+    width: 20px;
+  }
+
+  &__tel {
+    font-size: 24px;
+  }
+
+  &__text {
+    font-size: 12px;
+  }
+}
+
+.l-header .p-info {
+  &__tel-wrapper {
+    @include mq(lv1280) {
+      justify-content: center;
+      margin-bottom: 6px;
+    }
+  }
+}

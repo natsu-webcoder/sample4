@@ -1,0 +1,23 @@
+@use "../../global" as *;
+
+
+.p-top-care {
+
+  &__heading{
+    text-align: center;
+  }
+
+  &__lead {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  &__body {
+    margin-top: 60px;
+  }
+
+  &__more {
+    margin-top: 60px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,67 @@
+@use "../../global" as *;
+
+
+.p-parking {
+  padding-top: 30px;
+  padding-bottom: 70px;
+
+  @include mq(lv767) {
+    padding-bottom: 50px;
+  }
+
+  &__heading {
+    text-align: center;
+  }
+
+  &__body {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+
+    @include mq(lv767) {
+      margin-top: 30px;
+      flex-direction: column;
+    }
+  }
+
+  &__img-wrapper {
+    flex-shrink: 0;
+
+    @include mq(lv1280) {
+      width: 45%;
+    }
+
+    @include mq(lv767) {
+      width: 100%;
+    }
+  }
+
+  &__img {
+    height: 270px;
+    border-radius: 30px;
+    object-fit: cover;
+
+    @include mq(lv767) {
+      height: 200px;
+      width: 100%;
+    }
+  }
+
+  &__text-wrapper {
+    @include mq(lv767) {
+      margin-top: 30px;
+    }
+  }
+
+  &__text01 {
+    margin-bottom: 20px;
+    line-height: 2;
+  }
+
+  &__text02,
+  &__text03 {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+}

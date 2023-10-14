@@ -1,0 +1,41 @@
+@use "../../global" as *;
+
+
+.c-more {
+  display: inline-block;
+  position: relative;
+  padding-right: 50px;
+  font-size: 14px;
+  text-decoration: underline;
+
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 37px;
+    height: 5px;
+    background-image: url(../img/arrow.svg);
+    right: 0;
+    top: 50%;
+    transform: translateY(-85%);
+    transition: .3s ease-in-out;
+  }
+
+  &:hover::after {
+    right: -10px;
+  }
+
+  &--reverse {
+    padding-right: 0;
+    padding-left: 50px;
+    
+    &::after {
+      background-image: url(../img/arrow2.svg);
+      left: 0;
+    }
+
+    &:hover::after {
+      left: -10px;
+    }
+  }
+}

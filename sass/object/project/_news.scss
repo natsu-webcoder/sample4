@@ -1,0 +1,20 @@
+@use "../../global" as *;
+
+
+.p-news {
+  &__heading {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__more {
+    margin-top: 30px;
+    text-align: right;
+  }
+}
+
+.blog .p-news {
+  @include mq(lv767) {
+    padding-top: 80px;
+  }
+}

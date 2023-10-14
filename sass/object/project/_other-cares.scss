@@ -1,0 +1,25 @@
+@use "../../global" as *;
+
+
+.p-other-cares {
+  padding-top: 30px;
+  padding-bottom: 70px;
+
+  @include mq(lv767) {
+    padding-bottom: 50px;
+  }
+
+  &__heading {
+    text-align: center;
+    margin-bottom: 46px;
+
+    @include mq(lv767) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__more {
+    margin-top: 46px;
+    text-align: center;
+  }
+}

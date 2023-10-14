@@ -1,0 +1,87 @@
+@use "../../global" as *;
+
+
+.p-category-list {
+  &__inner {
+    padding: 40px 0;
+    background-color: #fff;
+    border-radius: 40px;
+    font-weight: bold;
+
+    @include mq(lv767) {
+      padding: 30px 0;
+    }
+  }
+
+  &__lead {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 18px;
+    position: relative;
+
+    @include mq(lv767) {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      transform: translateY(-55%);
+      width: 20px;
+      height: 20px;
+      background-image: url(../img/search.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-left: 4px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &__item {
+    @include mq(lv767) {
+      width: calc(50% - 30px);
+      text-align: center;
+    }
+  }
+
+  &__item-link {
+    display: block;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
+
+    &.active {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}
+
+.archive .p-category-list {
+  padding-top: 60px;
+
+  @include mq(lv767) {
+    padding-top: 30px;
+  }
+}
+
+.post-type-archive-blog .p-category-list {
+
+  &__item-link {
+    &--all {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}

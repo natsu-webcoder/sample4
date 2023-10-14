@@ -1,0 +1,93 @@
+@use "../../global" as *;
+
+.wordpress-content>*:first-child {
+  margin-top: 0;
+}
+
+.wordpress-content {
+  p {
+    line-height: 1.8;
+    margin-top: 30px;
+  }
+
+  ol,
+  ul {
+    margin-top: 30px;
+  }
+
+  li {
+    line-height: 1.8;
+  }
+
+  ol li {
+    list-style-type: decimal;
+    list-style-position: inside;
+  }
+
+  ul li {
+    padding-left: 20px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 6px;
+      height: 6px;
+      left: 4px;
+      top: 0.7em;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      background-color: #000;
+    }
+  }
+
+  li+li {
+    margin-top: 10px;
+  }
+
+  h3 {
+    font-size: 22px;
+    font-weight: bold;
+    padding-left: 14px;
+    border-left: 4px solid #000;
+    margin-top: 30px;
+
+    @include mq(lv767) {
+      font-size: 18px;
+    }
+  }
+
+  h3+p {
+    margin-top: 20px;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  a {
+    text-decoration: underline;
+    color: #3b81ba;
+  }
+
+  blockquote {
+    padding: 26px 30px 26px 74px;
+    background-color: #F8F8F8;
+    display: flex;
+    position: relative;
+    margin-top: 30px;
+
+    &::before {
+      position: absolute;
+      content: '“';
+      font-size: 90px;
+      color: #B4B4B4;
+      top: 20px;
+      left: 20px;
+    }
+
+    p {
+      margin-top: 0;
+    }
+  }
+}
